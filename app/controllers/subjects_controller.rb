@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
-  
+
   def index
-    @Subjects = Subject.all
+    @subject = Subject.all
   end
 
   def show

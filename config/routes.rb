@@ -2,7 +2,7 @@ Guide::Application.routes.draw do
 
   get "/" => "home#index"
 
-  get "/subjects" => "subjects#index"
+  resources :subjects
 
   resources :notes, :except => [:index]
   # The priority is based upon order of creation:

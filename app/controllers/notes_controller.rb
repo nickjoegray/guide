@@ -15,7 +15,7 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(params[:note])
       if @note.save
-        render :show, :notice => "Saved!"
+        render :show, flash[:notice] => "Saved!"
       else
         render :new
       end
