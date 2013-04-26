@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Subject.create([{ title: 'Routing'}])
+Note.create([{ title: 'Routes', content: 'lorem ipsum gakjnsglkjsnglkjnasglkjnsg kjdfng', word_count: 4}])
