@@ -2,7 +2,6 @@ class NotesController < ApplicationController
 
   def show
     @note = Note.find(params[:id])
-    @note_file = @note.File
   end
 
   def new 
@@ -30,3 +29,5 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id]).destroy
     redirect_to :subject
   end
+
+end

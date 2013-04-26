@@ -11,6 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130426192232) do
+
+  create_table "notes", :force => true do |t|
+    t.string  "title"
+    t.text    "content"
+    t.integer "word_count"
+  end
+
+  create_table "notes_subjects", :id => false, :force => true do |t|
+    t.integer "note_id"
+    t.integer "subject_id"
+  end
+
+  create_table "subjects", :force => true do |t|
+    t.string "title"
+  end
 
 end
