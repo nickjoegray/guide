@@ -5,6 +5,8 @@ Guide::Application.routes.draw do
   resources :subjects
 
   resources :notes, :except => [:index]
+
+  resources :search 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -30,4 +30,11 @@ class NotesController < ApplicationController
     redirect_to :subject
   end
 
+  def search
+    @search = Note.search(:include => [:subjects]) do 
+      keywords(params[:q])
+    end
+  end
+
+
 end
