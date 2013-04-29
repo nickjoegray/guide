@@ -2,6 +2,8 @@ Guide::Application.routes.draw do
 
   get "/" => "home#index"
 
+  get "/search" => "subjects#search"
+
   resources :subjects
 
   resources :notes, :except => [:index]
