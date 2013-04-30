@@ -3,7 +3,7 @@ class Note < ActiveRecord::Base
 
   has_and_belongs_to_many :subjects
 
-  searchable do 
+  searchable :auto_index => false do 
     text :title
     text :content, :default_boost => 2
   end

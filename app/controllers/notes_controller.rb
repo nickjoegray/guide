@@ -23,6 +23,12 @@ class NotesController < ApplicationController
 
   def update 
     @note = Note.find(params[:id])
+    if @note.update_attributes(:content => params[:notes][:content])
+      @note.save
+      redirect_to note_path(@note.id)
+    else
+      render :show
+    end
   end
 
   def destroy

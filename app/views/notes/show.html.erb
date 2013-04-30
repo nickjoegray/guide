@@ -1,4 +1,4 @@
-<form accept-charset="UTF-8" action="/notes" method="get">
+<!-- <form accept-charset="UTF-8" action="/notes" method="get">
   <div style="margin:0;padding:0">
     <input name="utf8" type="hidden" value="&#x2713;" />
   </div>
@@ -8,8 +8,38 @@
   <br>
   <br>
   <%= @note.content %>
+</form> --> 
+
+
+<form action="" method="post"> 
+  <p>
+    <input type="submit" class="btn" value="Save"></input>
+  </p>
+
+  <div id="redactor_content">
+    <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 120 %>
+  </div>
 </form>
 
 
 
-<!-- look up bootstrap and asana/trello -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
