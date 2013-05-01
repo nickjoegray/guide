@@ -14,7 +14,8 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(params[:note])
-      if @note.save
+      if @note.update_attributes(:content => params[:notes][:content], :searchable => (params[:notes][:content]).gsub(%r{</?[^>]+?>}, ''))
+        @note.save
         render :show, flash[:notice] => "Saved!"
       else
         render :new
