@@ -1,10 +1,10 @@
 class Note < ActiveRecord::Base
-  attr_accessible :id, :title, :content, :word_count
+  attr_accessible :id, :title, :content, :word_count, :searchable
 
   has_and_belongs_to_many :subjects
 
-  searchable :auto_index => false do 
+  searchable :auto_index => true do 
     text :title
-    text :content, :default_boost => 2
+    text :searchable, :default_boost => 2
   end
 end
