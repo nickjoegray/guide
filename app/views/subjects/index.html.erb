@@ -1,12 +1,8 @@
 Results </br>
 
-<%= puts @results[0].title %>
-
 <ul>
 <% @results.each do |result| %>
 <li><%= link_to result.title, note_path(result) %></li>
 <% end %>
 </ul>
  
-</br>
-<%= puts @results.methods - Object.methods %>

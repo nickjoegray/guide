@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require redactor-rails
 //= require_tree .
