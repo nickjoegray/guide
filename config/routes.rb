@@ -2,6 +2,8 @@ Guide::Application.routes.draw do
 
   mount RedactorRails::Engine => '/redactor_rails'
 
+  root :to => 'home#index'
+
   get "/" => "home#index"
 
   get "/search" => "subjects#search"
@@ -11,6 +13,8 @@ Guide::Application.routes.draw do
   resources :notes, :except => [:index]
 
   post "notes/:id" => "notes#update"
+
+  delete "notes/:id" => "notes#destroy"
 
   resources :search 
   # The priority is based upon order of creation:

@@ -34,7 +34,7 @@ class NotesController < ApplicationController
 
   def destroy
     @note = Note.find(params[:id]).destroy
-    redirect_to :subject
+    redirect_to root_url
   end
 
   def search
