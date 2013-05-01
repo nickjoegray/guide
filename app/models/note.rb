@@ -1,6 +1,9 @@
 class Note < ActiveRecord::Base
   attr_accessible :id, :title, :content, :word_count, :searchable
 
+  validates :title, :presence => {:message => "should not be blank"}
+  validates :content, :presence => {:message => "should not be blank"}
+
   has_and_belongs_to_many :subjects
 
   searchable :auto_index => true do 

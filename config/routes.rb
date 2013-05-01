@@ -10,7 +10,7 @@ Guide::Application.routes.draw do
 
   resources :subjects
 
-  resources :notes, :except => [:index]
+  resources :notes
 
   post "notes/:id" => "notes#update"
 

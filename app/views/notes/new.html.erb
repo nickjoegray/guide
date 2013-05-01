@@ -2,10 +2,22 @@
   <div style="margin:0;padding:0">
     <input name="utf8" type="hidden" value="&#x2713;" />
   </div>
+
+  <% if @note.errors.any? %>
+    <div class="errors">
+      <h3>Please fix the following errors</h3>
+      <ul>
+        <% @note.errors.full_messages.each do |e| %>
+          <li><%= e %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div id="redactor_content">
   <%= form_for @note, :url => { :action => "create"}, :html => { :class => "note_form"} do |f| %>
-    <%= f.text_field :title %></br>
-    <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 120 %>
+    Title: <%= f.text_field :title %></br>
+    Note: <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 120 %>
     <%= f.submit "Create Note" %>
   <% end %>
   </div>

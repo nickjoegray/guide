@@ -11,19 +11,23 @@
 </form> --> 
 
 
+<p>
+  <%= button_to "Delete This Note", note_path(@note.id), :method => :delete %>
+</p>
+
 <form action="" method="post"> 
   <p>
-    <input type="submit" class="btn" value="Save"></input>
+    <input type="submit" class="btn" value="Save This Note"></input>
   </p>
-  <p>
-  <%= button_to "Delete", note_path(@note.id), :method => :delete %>
-  </p>
-
+  
   <div id="redactor_content">
     <%= text_area_tag :title, @note.title, :class => "redactor_title", :rows => 1, :cols => 60 %></br>
-    <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 120 %>
+    <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 150 %>
   </div>
 </form>
+
+
+
 <!-- 
 <form action="delete" method="">
   <p>
