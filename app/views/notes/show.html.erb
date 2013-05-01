@@ -16,7 +16,7 @@
     <input type="submit" class="btn" value="Save"></input>
   </p>
   <p>
-  <%= link_to "Delete", note_path(@note.id), :method => :delete %>
+  <%= button_to "Delete", note_path(@note.id), :method => :delete %>
   </p>
 
   <div id="redactor_content">
