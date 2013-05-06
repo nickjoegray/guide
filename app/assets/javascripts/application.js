@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
+//= require jquery.modal
 //= require bootstrap
 //= require redactor-rails
 //= require_tree .

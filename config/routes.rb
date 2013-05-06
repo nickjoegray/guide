@@ -17,6 +17,8 @@ Guide::Application.routes.draw do
   delete "notes/:id" => "notes#destroy"
 
   resources :search 
+
+  get "/aboutus" => "aboutus#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
