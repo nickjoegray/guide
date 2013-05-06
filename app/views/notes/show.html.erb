@@ -1,18 +1,16 @@
-<!-- <form accept-charset="UTF-8" action="/notes" method="get">
-  <div style="margin:0;padding:0">
-    <input name="utf8" type="hidden" value="&#x2713;" />
+<% if @note.errors.any? %>
+  <div class="errors">
+    <h3>Please fix the following errors</h3>
+    <ul>
+      <% @note.errors.full_messages.each do |e| %>
+        <li><%= e %></li>
+      <% end %>
+    </ul>
   </div>
-  <%= @note.title %>
-  <br>
-  <br>
-  <br>
-  <br>
-  <%= @note.content %>
-</form> --> 
-
+<% end %>
 
 <p>
-  <%= button_to "Delete This Note", note_path(@note.id), :method => :delete %>
+  <%= button_to "Delete This Note", note_path(@note.id), :method => :delete, :class => "btn" %>
 </p>
 
 <form action="" method="post"> 
@@ -25,34 +23,6 @@
     <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 150 %>
   </div>
 </form>
-
-
-
-<!-- 
-<form action="delete" method="">
-  <p>
-    <input type="submit" class="btn" value="Delete"></input>
-  </p>
-</form>
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

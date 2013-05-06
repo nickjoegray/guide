@@ -18,10 +18,26 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
- .content {
+.search-box {
+  text-align: center;
+  input[type="text"] {
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: inset 0px 1px 0px rgba(0,0,0,0.5);
+  }
+  input[type="submit"] {
+    margin-top: -11px;
+    padding: 3px 12px;
+  }
+}
+
+.new-note {
+  background-color: black;
+}
+
+.content {
   background-color: #eee;
   padding: 90px;
-  margin: 0 -80px; /* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -42,6 +58,7 @@ html {
 
 .makers {
   text-align: center;
+
 }
 
 .bio-img {

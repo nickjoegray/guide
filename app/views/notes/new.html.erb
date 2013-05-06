@@ -16,9 +16,9 @@
 
   <div id="redactor_content">
   <%= form_for @note, :url => { :action => "create"}, :html => { :class => "note_form"} do |f| %>
-    Title: <%= f.text_field :title %></br>
-    Note: <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 120 %>
-    <%= f.submit "Create Note" %>
+    </br><%= f.text_field :title, :placeholder => "Title" %></br>
+    <%= text_area_tag :"notes[content]", @note.content, :class => "redactor", :rows => 200, :cols => 120 %>
+    <%= f.submit "Create Note", :class => "btn" %>
   <% end %>
   </div>
 </form>

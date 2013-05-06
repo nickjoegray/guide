@@ -18,7 +18,7 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(params[:note])
-      if @note.update_attributes(:content => params[:notes][:content], :searchable => (params[:notes][:content]).gsub(%r{</?[^>]+?>}, ''))
+      if @note.update_attributes(:title => params[:title], :content => params[:notes][:content], :searchable => (params[:notes][:content]).gsub(%r{</?[^>]+?>}, ''))
         @note.save
         render :show, flash[:notice] => "Saved!"
       else
@@ -28,7 +28,7 @@ class NotesController < ApplicationController
 
   def update 
     @note = Note.find(params[:id])
-    if @note.update_attributes(:content => params[:notes][:content], :searchable => (params[:notes][:content]).gsub(%r{</?[^>]+?>}, ''))
+    if @note.update_attributes(:title => params[:title], :content => params[:notes][:content], :searchable => (params[:notes][:content]).gsub(%r{</?[^>]+?>}, ''))
       @note.save
       redirect_to note_path(@note.id)
     else
@@ -46,6 +46,5 @@ class NotesController < ApplicationController
       keywords(params[:q])
     end
   end
-
 
 end
