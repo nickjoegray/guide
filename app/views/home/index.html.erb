@@ -1,11 +1,22 @@
+<img src="notepad_background3-1_copy.gif" class="note-image">
+<!-- <div class="info">
+  <p>Having difficulties and need to search a subject or term in Rails?</p>
+  <p>Type in any programming topic into the search bar and press enter. If you want to search with Google and/or Stack Overflow, then check the boxes beside to open new tabs.</p>
+  <p>Now enjoy the ease of searching on just 1 page!</p>
+</div> -->
+
+<br>
+<br>
+<br>
+
 <div class="search-box" textarea style="width:500px; height:375px;">
 <%= form_tag subjects_path, :method => "get" do %>
   <p>
     <%= text_field_tag(:q, params[:q], :placeholder => "            Search all notes!") %>
     <%= submit_tag "Search", :class => "search btn"%>
   </p>
-
-<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="checksearch">Search Google for this <br>
+<br>
+<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="checksearch">Search Google for this <br><br>
 
 <input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="checksearch">Search StackOverflow for this <br>
 
