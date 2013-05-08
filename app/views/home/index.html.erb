@@ -1,13 +1,13 @@
-<div class="search-box">
+<div class="search-box" textarea style="width:500px; height:375px;">
 <%= form_tag subjects_path, :method => "get" do %>
   <p>
     <%= text_field_tag(:q, params[:q], :placeholder => "            Search all notes!") %>
     <%= submit_tag "Search", :class => "search btn"%>
   </p>
 
-<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="googleSearch">Search Google for this <br>
+<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="checksearch">Search Google for this <br>
 
-<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="soSearch">Search StackOverflow for this <br>
+<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="checksearch">Search StackOverflow for this <br>
 
 <% end %>
 

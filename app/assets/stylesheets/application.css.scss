@@ -18,9 +18,26 @@
  @import "bootstrap";
  @import "bootstrap-responsive";
 
+ .navbar {
+  height: 100px;
+ }
+
+a.research-header {
+  font-size: 45px;
+}
+
+ .navbar-inner {
+  height: 60px;
+  width: auto;
+  font-size: 25px;
+ }
+
 .search-box {
+  padding-left: 250px;
   text-align: center;
   input[type="text"] {
+    height: 20px;
+    width: 250px;
     padding: 8px;
     border-radius: 20px;
     box-shadow: inset 0px 1px 0px rgba(0,0,0,0.5);
@@ -79,6 +96,6 @@ html {
   height: 400px;
   margin-top: 50px;
   margin-bottom: 50px;
-  border-radius: 10px;
+  border-radius: 200px;
   border: 5px solid black;
 }
