@@ -1,8 +1,39 @@
 <div class="search-box">
 <%= form_tag subjects_path, :method => "get" do %>
   <p>
-    <%= text_field_tag(:q, params[:q], :placeholder => "            Search all things!") %>
-    <%= submit_tag("Search") %>
+    <%= text_field_tag(:q, params[:q], :placeholder => "            Search all notes!") %>
+    <%= submit_tag "Search", :class => "search btn"%>
   </p>
+
+<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="googleSearch">Search Google for this <br>
+
+<input type="checkbox" name="<%= params[:q] %>" value="<%= params[:q] %>" class="soSearch">Search StackOverflow for this <br>
+
 <% end %>
+
 </div>
+
+<script>
+
+$(".search.btn").click(function(){
+  var q = $("#q").val();
+  q = encodeURIComponent(q);
+
+  if ($(".soSearch").is(":checked")) {
+    window.open('http://stackoverflow.com/search?q=' + q);
+  }
+  
+  if ($(".googleSearch").is(":checked")) {
+    window.open('http://www.google.com/');
+  }
+})
+
+</script>
+
+
+<!-- .gsub!(/" "/, '+') -->
+
+<!-- 
+<a href="http://www.stackoverflow.com/"<%= params[:q]%> target="_blank">Search Stack OverFlow for this!</a>
+</br>
+ -->
