@@ -1,8 +1,9 @@
-Results </br>
-
-<ul>
-<% @results.each do |result| %>
-<li><%= link_to result.title, note_path(result) %></li>
-<% end %>
-</ul>
- 
+<div class="search-results">
+  <h1>Results</h1>
+  </br>
+  <ul>
+  <% @results.each do |result| %>
+  <li class="search-notes"><%= link_to result.title, note_path(result) %></li>
+  <% end %>
+  </ul>
+</div>

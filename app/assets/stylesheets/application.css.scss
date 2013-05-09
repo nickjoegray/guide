@@ -96,6 +96,20 @@ a.research-header {
   margin-bottom: 5px;
 }
 
+.search-results {
+  margin-left: 140px;
+  margin-top: 20px;
+}
+
+.search-notes {
+  font-size: 24px;
+}
+
+.all-notes {
+  font-size: 24px;
+  margin-left: 140px;
+}
+
 .research-header {
   float: left;
   display: block;
@@ -113,8 +127,23 @@ ul.nav {
   font-size: 35px;
 }
 
-.new-note {
-  background-color: black;
+div.btn.new-note {
+  margin-left: -100px;
+  margin-top: 41px;
+}
+
+.total-notes {
+  margin-left: 120px;
+}
+
+.total-notes h2 {
+  font-size: 36px;
+  margin-top: -65px;
+}
+
+.total-notes ul {
+  margin-left: -100px;
+  margin-top: 40px;
 }
 
 .content {

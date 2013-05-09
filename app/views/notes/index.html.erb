@@ -1,9 +1,13 @@
 <div class="btn new-note">
-<h4><%= link_to "Create New Note", :action => "new" %></h4>
+  <h4><%= link_to "Create New Note", :action => "new" %></h4>
 </div>
-
+<br>
+<br>
+<div class="total-notes">
+<h2>All of your Notes:</h2>
 <ul>
   <% @notes.each do |note| %>
-  <li><%= link_to note.title, note_path(note) %></li>
+  <li class="all-notes"><%= link_to note.title, note_path(note) %></li>
 <% end %>
 </ul>
+</div>
