@@ -1,0 +1,4 @@
+Don't forget to run these commands to start everything up:
+
+-- start up the solr server
+bundle exec rake sunspot:solr:start
