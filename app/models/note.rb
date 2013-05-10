@@ -10,7 +10,6 @@ class Note < ActiveRecord::Base
 
   searchable :auto_index => true do 
     text :title
-    
     text :searchable, :default_boost => 2
   end
 end
