@@ -61,7 +61,7 @@ a.research-header {
 
 .search-box {
   font-size: 20px;
-  margin-top: -275px;
+  margin-top: -385px;
   float: right;
   display: inline;
   position: relative;
@@ -84,6 +84,22 @@ a.research-header {
   input[type="checkbox"] {
     margin-right: 15px;
   }
+  //  input[type="checkbox"] {
+  //   margin-right: 15px;
+  //   display:none;
+  // }
+  // input[type="checkbox"] + label span {
+  //     display:inline-block;
+  //     width:19px;
+  //     height:19px;
+  //     margin:-1px 4px 0 0;
+  //     vertical-align:middle;
+  //     background:url(check_radio_sheet.png) left top no-repeat;
+  //     cursor:pointer;
+  // }
+  // input[type="checkbox"]:checked + label span {
+  //     background:url(check_radio_sheet.png) -19px top no-repeat;
+  // }
 }
 
 .checksearch {
