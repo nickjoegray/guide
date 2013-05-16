@@ -189,10 +189,16 @@ html {
   margin-top: 30px;
 }
 
+h1.makers {
+  margin-left: 5px;
+  margin-top: 40px;
+  margin-bottom: 46px;
+}
+
 .bio-img {
   top: 25%;
   left: 50%;
-  width: 400px;
+  width: 350px;
   height: 400px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -200,4 +206,18 @@ html {
   border: 5px solid black;
   float: right;
   margin: 50px 10px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 2s ease-in-out; /* Safari and Chrome */
+  -o-transition: all 2s ease-in-out; /* Opera */
+}
+
+.bio-img.active {
+  /*transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);*/
+  opacity: 1;
+  height: 440px;
+  margin-right: 250px;
 }
