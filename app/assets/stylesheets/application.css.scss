@@ -123,8 +123,13 @@ a.research-header {
 
 .all-notes {
   font-size: 24px;
-  margin-left: 140px;
+  margin-left: 235px;
 }
+
+.larger:hover {
+  font-size: 200%;
+}
+// * this is the hover action over each li
 
 .research-header {
   float: left;
@@ -144,7 +149,7 @@ ul.nav {
 }
 
 div.btn.new-note {
-  margin-left: -100px;
+  margin-left: -29px;
   margin-top: 41px;
 }
 
@@ -155,6 +160,7 @@ div.btn.new-note {
 .total-notes h2 {
   font-size: 36px;
   margin-top: -65px;
+  margin-left: 70px;
 }
 
 .total-notes ul {

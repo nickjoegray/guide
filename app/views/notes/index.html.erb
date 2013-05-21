@@ -5,9 +5,11 @@
 <br>
 <div class="total-notes">
 <h2>All of your Notes:</h2>
+<div class="all-notes">
 <ul>
   <% @notes.each do |note| %>
-  <li class="all-notes"><%= link_to note.title, note_path(note) %></li>
+  <li><span class="larger"><%= link_to note.title, note_path(note) %></span></li>
 <% end %>
 </ul>
+</div>
 </div>
